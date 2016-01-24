@@ -7,8 +7,7 @@ window.data = {
             team: 'Our team',
             contact: 'Contact',
             whoweare: 'Who we are',
-            practice: 'Our practice',
-            blog: 'blog'
+            practice: 'Our practice'
         },
         string: {
             a: 'Know more',
@@ -282,8 +281,7 @@ window.data = {
             team: 'Nuestro Equipo',
             contact: 'Contacto',
             whoweare: '¿Quiénes Somos?',
-            practice: 'Áreas de Práctica',
-            blog: 'blog'
+            practice: 'Áreas de Práctica'
         },
         string: {
             a: 'Ver más',

@@ -1,0 +1,25 @@
+.slider_wrapper
+
+  .slideshow
+    margin: 0 auto
+
+  .pager_wrapper
+    text-align: center
+
+    .slideshow_pager
+      position: relative
+      z-index: 10
+      top: -25px
+
+      li
+        list-style-type: none
+        display: inline-block
+        padding: 0 10px
+
+        a
+          @extend %muli
+          color: $white
+
+        &.activeSlide
+          a
+            color: $blue

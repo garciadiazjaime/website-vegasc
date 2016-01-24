@@ -54,6 +54,17 @@ angular.module('mint.app.ContactController', [])
 					$scope.messageState.msg = text[lang].d;
 				}
 			};
+
+			var places = ['Tijuana', 'Mexicali', 'La Paz', 'Chula Vista'];
+			$('.slideshow').cycle({
+				fx: 'scrollLeft',
+				timeout: 0,
+				pager: '.slideshow_pager',
+				pagerAnchorBuilder: function(idx, slide) {
+					return '<li><a href="#">' + places[idx] + '</a></li>';
+		    }
+			});
+
 		};
 
 		init();
