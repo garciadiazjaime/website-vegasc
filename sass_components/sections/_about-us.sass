@@ -1,0 +1,237 @@
+#banner.about-us
+	background: url(#{$img}about-office-xs.jpg) center top no-repeat
+	background-size: cover
+
+#banner
+	color: $white
+	font-size: 14px
+	height: 310px
+	line-height: 1.15em
+	margin: 0 0 27px
+	text-align: center
+
+	.wrap
+		display: inline-block
+		max-width: 420px
+		vertical-align: middle
+
+	h1
+		@extend %times
+		font-size: 45px
+		letter-spacing: 0.19em
+		margin: 0
+		padding: 0
+		text-transform: uppercase
+
+		&:before
+			border: none
+			display: none
+
+	p
+		line-height: 1.5em
+		margin: 47px 0 41px
+
+	p.more
+		font-size: 12px
+		letter-spacing: .04em
+		line-height: 1em
+		margin: 0 0 15px
+		padding: 0 0 18px
+		position: relative
+		text-transform: uppercase
+
+		&:after
+			background: sprite($general-icons, down-arrow)
+			bottom: 0
+			@include sprite-dimensions($general-icons, down-arrow)
+			content: ""
+			display: block
+			left: 50%
+			margin: 0
+			margin-left: -((image-width(sprite-file($general-icons, down-arrow)))/2)
+			position: absolute
+
+
+
+#who-we-are, #our-history
+	position: relative
+
+	h2, h4
+		&:before
+			border: none
+			display: none
+
+	h2
+		color: $blue
+		@extend %times
+		font-size: 49px
+		font-style: italic
+		margin: 0 0 50px
+		max-width: 250px
+		padding: 0
+		text-transform: uppercase
+
+	.img
+		display: block
+		position: absolute
+		overflow: hidden
+
+		span
+			display: block
+			height: 100%
+			line-height: 5000em
+			position: relative
+			top: 20px
+			width: 100%
+
+	p
+		line-height: 1.9em
+		text-align: justify
+
+#paperwork
+	height: 310px
+	right: 0
+	top: 96px
+	width: 45%
+
+	span
+		background: url(#{$img}about-paperwork-xs.jpg) 0 0 no-repeat
+		background-size: cover
+		height: 290px
+		left: 20px
+		width: 100%
+
+		&:before, &:after
+			background: $blue
+			content: ""
+			display: block
+			left: -20px
+			position: absolute
+			top: -20px
+
+		&:before
+			height: 1px
+			max-width: 340px
+			width: 100%
+
+		&:after
+			height: 310px
+			width: 1px
+
+
+#old-border-crossing	
+	height: 285px
+	left: 50%
+	margin: 0 0 0 -405px
+	top: 20px
+	max-width: 50%
+	width: 400px
+
+	span
+		background: url(#{$img}home-tijuana-border.jpg) 0 0 no-repeat
+		height: 305px
+		right: 20px
+
+		&:before, &:after
+			background: $blue
+			content: ""
+			display: block
+			position: absolute
+			right: -20px
+			top: -20px
+
+		&:before
+			height: 1px
+			max-width: 45%
+			width: 310px
+
+		&:after
+			height: 300px
+			width: 1px
+
+#who-we-are
+	margin: 0 0 12px
+
+	h4
+		border-bottom: 1px solid $blue
+		@extend %muli
+		font-size: 10px
+		margin: 0 0 28px
+		padding: 0 0 15px
+		text-transform: uppercase
+
+#our-history
+	h2
+		margin-top: 15px		
+
+#solutions-phrase
+	background: #191919
+	color: $white
+	margin: 60px 0 40px
+	padding: 130px 0 140px
+	text-align: center
+
+	h3
+		color: $white
+		display: inline-block
+		font-size: 49px
+		font-style: italic
+		letter-spacing: 0.06em
+		margin: 0 auto
+		max-width: 600px
+		text-align: left
+
+		&:before
+			top: 20px
+
+#our-philosophy.about-us
+	padding-top: 0
+
+#our-team
+	.wrap
+		margin: 0 0 0 85px
+
+	h3, h4
+		color: $blue
+		padding: 0
+
+		&:before
+			border: none
+			display: none
+
+	h3
+		font-size: 49px
+		font-style: italic
+		text-transform: uppercase
+
+	h4
+		@extend %muli
+		font-size: 14px
+		line-height: 1em
+
+		em
+			color: $black
+			display: block
+			font-size: 21px
+			font-style: normal
+			line-height: 1.5em
+
+	p
+		line-height: 1.9em
+
+	ul
+		list-style-type: none
+		margin: 70px 0 15px 
+		padding: 0
+
+		&.social
+			margin: 20px
+
+			li
+				margin: 0
+
+	li
+		margin: 0 0 60px
+
+	.button
+		width: 180px

@@ -1,0 +1,26 @@
+// Mixins ---------------------------------------------------------------
+ 
+=placeholder-style
+	color: $black
+	@extend %muli
+	font-size: 13px
+	letter-spacing: 0.04em
+	opacity: 1
+ 
+=apply-placeholders
+	&::-webkit-input-placeholder
+		+placeholder-style
+	&:-moz-placeholder
+		+placeholder-style
+	&::-moz-placeholder
+		+placeholder-style
+	&.placeholder
+		+placeholder-style
+	&:-ms-input-placeholder
+		+placeholder-style
+
+.placeholders
+	+apply-placeholders
+ 
+input, textarea
+	@extend .placeholders

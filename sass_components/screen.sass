@@ -1,0 +1,451 @@
+@import "_setup"
+
+/* ****************** GENERAL ************** */
+
+@import "template/_general.sass"
+
+html, body
+	background: #fff
+
+body
+	@extend %muli
+	font-family: 'muli', Helvetica, Verdana, sans-serif
+	font-weight: normal
+	font-size: 14px
+	padding: 49px 0 0
+
+a
+	&:hover, &:focus, &:active
+		text-decoration: none
+
+h1, h2, h3
+	@extend %times
+	padding: 0 0 0 55px
+	position: relative
+
+	&:before
+		border-bottom: 7px solid $blue
+		border-left: 7px solid transparent
+		content: ""
+		height: 0
+		left: 0
+		position: absolute
+		top: 7px
+		@include transform (rotate(44deg))
+		width: 40px
+
+.ng-submitted
+	.ng-invalid
+		border: 1px solid #a94442
+
+#content
+	.container
+		max-width: 837px
+
+/* ****************** LAYOUT ************** */
+@import "template/_blocks.sass"
+
+#content
+	overflow: hidden
+	width: 100%
+
+.height-control
+	display: inline-block
+	vertical-align: middle
+
+.wrap + .height-control, .wrapp + .height-control, .wrapper + .height-control
+	height: 100%
+
+.button
+	border: 1px solid $black
+	border-width: 1px 0 0 1px
+	color: $black
+	display: block
+	height: 45px
+	font-size: 12px
+	overflow: hidden
+	padding: 12px 50px 5px 20px
+	position: relative
+	text-transform: uppercase
+	@include transition(.4s)
+	max-width: 230px
+	width: 160px
+
+	span
+		display: block
+		position: relative
+		z-index: 5
+
+		&:after
+			display: block
+			border-top: 3px solid transparent
+			border-left: 5px solid $blue
+			border-bottom: 3px solid transparent
+			content: ""
+			height: 0
+			width: 0
+			position: absolute
+			right: -5px
+			top: 5px
+			@include transition(.4s)
+
+	&:before, &:after
+		background: $black
+		content: ""
+		display: block
+		position: absolute
+		@include transition(.4s)
+		width: 1px
+
+	&:before
+		bottom: 0
+		left: 0
+		height: 1px
+		width: 150px
+		z-index: 1
+
+	&:after
+		height: 160px
+		right: 0
+		top: -80px
+		@include transform (rotate(33deg))
+		width: 2px
+
+	&:hover, &:focus, &:active
+		border-color: $blue
+		color: $blue
+
+		span
+			&:after
+				border-left-color: $black
+
+		&:before, &:after
+			background: $blue
+
+.button.white
+	border-color: $white
+	color: $white
+
+	&:before, &:after
+		background: $white
+
+	&:hover, &:focus, &:active
+		border-color: $blue
+		color: $blue
+
+		span
+			&:after
+				border-left-color: $white
+
+		&:before, &:after
+			background: $blue
+
+.button.dark-arrow
+	span
+		&:after
+			border-left-color: $black
+
+	&:hover, &:focus, &:active
+
+		span
+			&:after
+				border-left-color: $white
+
+/* ****************** HEADER ************** */
+@import "template/_header.sass"
+
+header, #header
+	background: $black
+	@extend %muli
+
+	ul.social
+		margin: 0
+
+	.navbar-default
+		@include box-shadow(none)
+
+.navbar-brand
+	top: 13px
+
+.navbar
+	ul
+		margin: 15px 0 0
+
+.navbar-default
+	background: transparent
+	border: none	
+
+.nav > li	
+	margin: 0 0 0 50px
+
+.navbar-nav > li > a
+	padding: 0 
+
+.navbar-default .navbar-nav > li > a
+	color: $white
+	font-size: 10px
+	letter-spacing: 0.09em
+	text-transform: uppercase
+
+	&:hover, &:focus, &:active
+		color: $blue
+
+#lang
+	color: #787878
+	font-size: 10px
+	letter-spacing: 0.06em
+	margin: 5px 0 0 15px
+	text-transform: uppercase
+
+	a
+		color: #787878
+
+		&:hover, &:focus, &:active
+			color: lighten(#787878, 10)
+
+	.active
+		color: white
+
+		&:hover, &:focus, &:active
+			color: white
+			cursor: default
+
+.social
+	.linkedin
+		a
+			background: #55ade1
+
+			&:before
+				background: sprite($general-icons, linkedin)
+				@include sprite-dimensions($general-icons, linkedin)
+				margin-left: -((image-width(sprite-file($general-icons, linkedin)))/2)
+				top: 7px
+
+			&:hover, &:focus, &:active
+				background: darken(#55ade1, 10)
+
+	.twitter
+		a
+			background: #2aa9e0
+			&:before
+				background: sprite($general-icons, twitter)
+				@include sprite-dimensions($general-icons, twitter)
+				margin-left: -((image-width(sprite-file($general-icons, twitter)))/2)
+				top: 7px
+
+			&:hover, &:focus, &:active
+				background: darken(#2aa9e0, 10)
+
+
+/* ****************** FOOTER ************** */
+@import "template/_footer.sass"
+
+footer, #footer
+	margin-top: 90px
+	overflow: hidden
+	width: 100%
+
+#footer-head
+	background: $black
+	color: white
+	@extend %times
+	font-size: 8px
+	letter-spacing: 1em
+	padding: 28px 0
+	text-transform: uppercase
+
+	p
+		margin: 0
+		min-height: image-height(sprite-file($general-icons, medium-logo))
+		padding: 5px 0 0
+		padding-left: image-width(sprite-file($general-icons, medium-logo))
+		position: relative
+
+		&:before
+			background: sprite($general-icons, medium-logo)
+			@include sprite-dimensions($general-icons, medium-logo)
+			content: ""
+			display: block
+			left: 0
+			position: absolute
+			top: 0
+
+#footer-main
+	background: #232323	
+	color: $white
+	font-size: 12px
+	letter-spacing: .06em
+
+	h5
+		font-size: 10px
+		margin: 0 0 15px
+
+	h6
+		color: $blue
+		@extend %times
+		font-size: 10px
+		margin: 0 0 10px
+		a
+			color: $blue
+
+			&:hover, &:focus, &:active
+				color: lighten($blue, 10)
+
+	ul
+		list-style-type: none
+		padding: 0
+
+	a
+		color: $white
+		text-transform: uppercase
+
+		&:hover, &:focus, &:active
+			color: $blue
+
+	.col-sm-8
+		.row:nth-child(2)
+			.col-xs-12
+				&:first-child, &:nth-child(3)
+					padding-left: 55px
+					position: relative
+
+					&:before
+						color: $blue
+						content: "MX"
+						display: inline-block
+						@extend %times
+						font-size: 10px
+						left: 15px
+						position: absolute
+						text-transform: uppercase
+						top: 20px
+
+				&:nth-child(3)
+					&:before
+						content: "US"
+
+	.tel
+		margin: 20px 0 40px
+		padding: 0
+		text-transform: none
+
+	.email
+		margin: 0 0 0 40px
+		padding: 0
+		text-transform: none
+
+	.tel, .email
+		@extend %muli
+		font-size: 10px
+		word-wrap: break-word
+
+		&:hover, &:focus, &:active
+			color: $blue
+
+	.social
+		margin: 0 0 0 40px
+
+	.brochure
+		padding-top: 100px
+
+		.custom_submit
+			width: 270px
+
+			&:before
+				border-top: 30px solid $blue
+			
+			&:hover, &:focus, &:active
+				&:before
+					border-top-color: white
+
+			&:after
+				display: none
+
+		a
+			display: inline-block
+			padding: 10px 60px 10px 10px
+			position: relative
+			@extend %muli
+			font-size: 10px
+			color: black
+			cursor: pointer
+			text-transform: initial
+
+			&:hover
+
+				i
+					&:before
+						border-top: 5px solid $blue
+
+					&:after
+						border-bottom: 1px solid $blue
+						border-left: 1px solid $blue
+						border-right: 1px solid $blue
+			i
+				&:before
+					content: ''
+					display: block
+					width: 0 
+					height: 0
+					border-left: 5px solid transparent
+					border-right: 5px solid transparent
+					border-top: 5px solid white
+					position: absolute
+					right: 40px
+					bottom: 20px
+					z-index: 3
+
+				&:after
+					content: ''
+					display: inline-block
+					height: 7px
+					width: 30px
+					position: absolute
+					right: 30px
+					top: 14px
+					border-bottom: 1px solid white
+					border-left: 1px solid white
+					border-right: 1px solid white
+					z-index: 3
+
+#footer-bottom
+	background: $blue
+	color: $black
+	font-size: 10px
+	padding: 20px 0 10px
+
+	a
+		color: $black
+
+		&:hover, &:focus, &:active
+			color: darken($blue, 30)
+
+	p
+		margin: 0 0 10px
+
+p#credit
+	color: #566468
+	font-size: 8px
+
+	a
+		color: #566468
+
+		&:hover, &:focus, &:active
+			color: darken(#566468, 10)
+
+
+#credit
+	margin: 0	
+
+	a:first-child
+		display: inline-block
+		margin-right: 15px
+
+@import "sections/_home"
+@import "sections/_about-us"
+@import "sections/_what-we-do"
+@import "sections/_contact"
+@import "sections/_terms-conditions"
+
+@import "template/_responsive"
+@import "_responsive"

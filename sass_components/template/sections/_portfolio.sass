@@ -1,0 +1,202 @@
+/* ***********  PORTFOLIO ****************** */
+#main-content.portafolio, #main-content.portfolio, #main-content.post, #main-content.posts
+	padding: 68px 0 0
+
+.portafolio, .portfolio
+	.project-grid.columns-2
+		.col-xs-12, a
+			height: 290px
+
+	.project-grid
+		.col-xs-12, a
+			height: 257px
+			
+	.button
+		color: #fff
+		padding-bottom: 10px
+		padding-top: 10px
+		text-transform: none
+		width: 120px
+		
+	.right-arrow
+		top: 12px
+		
+	.slider-brandline
+		.item	
+			height: 545px
+			
+		.nav-arrow-left, .nav-arrow-right
+			top: 255px
+
+#portfolio-submenu, #post-submenu
+	background: black
+	color: white
+	height: 68px
+	position: fixed
+	left: 0
+	top: 68px
+	width: 100%
+	z-index: 99
+	
+	.container
+		padding-top: 25px
+		position: relative
+	
+	a
+		color: white
+		
+		&:hover, &:active, &:focus
+			color: blue
+	
+	ul, li	
+		display: inline-block
+		font-size: 12px
+		vertical-align: top
+	ul
+		margin: 0
+		padding: 0 170px 0 0
+		
+	p
+		display: inline-block
+		margin: 0
+		text-transform: uppercase
+		
+	li
+		margin-left: 40px
+
+#portfolio-submenu.condensed, #post-submenu.condensed
+	height: 40px
+	top: 45px
+	
+	.container
+		padding-top: 10px
+		
+	#search-box	
+		top: 7px
+
+#search-box
+	height: 25px
+	overflow: hidden
+	position: absolute
+	right: 15px
+	top: 21px
+	@include transition(width, .4s)
+	
+	.search
+		left: 0
+		position: absolute
+		top: 3px
+		
+		&:hover, &:active
+			background-position: -26px -222px
+			cursor: pointer
+		
+#search-box.open
+	width: 168px
+	
+	#search-b
+		right: 0
+		
+#search-box.closed
+	width: 18px
+	
+#search-b
+	color: black
+	height: 25px
+	position: absolute
+	right: -150px
+	top: -1px
+	@include transition(right, .4s)
+	width: 140px
+
+#submenu-filter
+	display: none
+	margin: 0 0 0 15px
+	
+	.select-wrapp
+		display: inline-block
+		margin: 0 10px 0 0
+		overflow: hidden
+		position: relative
+		vertical-align: top
+		width: 140px
+		
+	.decor
+		background: #b6b6b7
+		display: block
+		height: 100%
+		pointer-events: none
+		position: absolute
+		right: 0
+		top: 0
+		width: 25px
+		z-index: 5
+		
+	select
+		border: none
+		@include border-radius(0)
+		color: black
+		display: block
+		height: 20px
+		width: 130%
+		
+		&:hover
+			cursor: pointer
+			
+.banner-imagenes
+	.nav-arrow-left, .nav-arrow-right
+		top: 132px	
+		
+	.item
+		height: 292px //poner lo mismo en img y en .img
+		overflow: hidden
+		
+	img, .img
+		display: block
+		width: 100%
+		
+	img
+		margin: 0 auto
+		min-height: 292px //temporal
+		
+	.img	
+		background: url(#{$img}placeholder-img-grl_blck.jpg) center center no-repeat
+		background-size: cover
+		background-size: 100% 100% //remover y dejar cover
+		height: 292px
+
+.banner-imagenes.big
+	.item
+		height: 545px	
+		
+	img	
+		min-height: 545px //temporal
+		
+	.img
+		height: 545px
+		
+	.nav-arrow-left, .nav-arrow-right
+		top: 260px
+		
+.img.full-width
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	display: block
+	line-height: 5000em
+	overflow: hidden
+	width: 100%
+	
+#otro-id
+	background-image: url(#{$img}placeholder-img-grl.jpg)
+	height: 292px
+	
+.img.big-phrase
+	text-align: left
+	
+	.subtitle, p
+		font-size: 50px
+		line-height: 1em
+		
+	.medium-header-graph
+		margin: 0 0 10px

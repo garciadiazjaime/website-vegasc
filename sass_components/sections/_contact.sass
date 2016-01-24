@@ -1,0 +1,225 @@
+.contact
+	margin: 0
+	padding: 20px 0 0
+	position: relative
+
+	.row
+		position: relative
+		z-index: 5
+
+	h1, h2, h3
+		color: $blue
+		font-size: 23px
+		padding: 0
+
+		&:before
+			border: none
+			display: none
+
+	h3
+		display: none
+
+	.wrap
+		margin: 0 auto
+		max-width: 360px
+		width: 96%
+
+	&:after
+		background: #f7f7f7
+		content: ""
+		display: block
+		height: 460px
+		margin: 0
+		position: absolute
+		right: 20px
+		top: 20px
+		width: 50%
+		z-index: 1
+
+	.email
+		padding: 6px 0 0
+
+		&:hover, &:focus, &:active
+			color: $blue
+
+	h1
+		margin-bottom: 35px
+
+	label
+		display: block
+
+#location-row
+	height: 400px
+
+	.col-xs-12
+		height: 100%
+		position: relative
+
+#map
+	background: #333333
+	border: none
+	height: 400px
+	left: 0
+	margin: 0
+	position: absolute
+	top: 0
+	width: 100%
+
+	a
+		background: url(#{$img}map.jpg) 0 0 no-repeat
+		background-size: cover
+		display: block
+		height: 100%
+		line-height: 5000em
+		opacity: 1
+		overflow: hidden
+		@include transition(.4s)
+		width: 100%
+
+		&:hover, &:focus, &:active
+			opacity: 0.6
+			@include transition(.4s)
+
+#contact-location
+	background: url(#{$img}contact-location-xs.jpg) center top no-repeat
+	background-size: cover
+	height: 400px
+	left: 0
+	line-height: 5000em
+	overflow: hidden
+	position: absolute
+	top: 0
+	width: 100%
+
+label
+	display: none
+
+input, textarea
+	background: transparent
+	border: none
+	border-bottom: 1px solid #c7c7c7
+	display: block
+	font-size: 13px
+	letter-spacing: .04em
+	margin: 0 0 18px
+	width: 100%
+
+form
+	margin: 0 0 60px
+	min-height: 400px
+	position: relative
+	z-index: 5	
+
+	.social
+		.linkedin
+			margin: 0 0 0 20px
+
+#contact-info
+	font-size: 13px
+	list-style-type: none
+	margin: 0 0 15px
+	padding: 0	
+
+	ul
+		list-style-type: none
+		margin: 0 0 50px
+		padding: 0	
+
+	li
+		padding: 0 0 0 30px
+		position: relative
+
+		&:first-child
+			padding: 0
+
+			li
+				padding: 0 0 0 30px
+
+	.tel
+		margin: 30px 0 25px
+		padding: 0
+
+		&:hover, &:focus, &:active
+			color: darken($blue, 10)
+
+	h4
+		color: #787878
+		@extend %muli
+		font-size: 13px
+
+	p
+		line-height: 1.9em
+
+#contact-info > li
+	&:before
+		color: $blue
+		content: "US"
+		display: inline-block
+		@extend %times
+		font-size: 12
+		left: 0
+		line-height: 1em
+		position: absolute
+		text-transform: uppercase
+		top: 2px
+
+	&:first-child
+		&:before
+			content: "MX"
+
+textarea
+	height: 70px
+
+.custom_submit
+	background: transparent
+	border: none
+	color: $white
+	display: block
+	font-size: 12px
+	height: 37px
+	line-height: 1em
+	margin: 33px 0 10px auto
+	padding: 8px 50px 7px 15px
+	position: relative
+	text-transform: uppercase
+	width: 135px
+
+	&:before
+		border-top: 37px solid $black
+		border-right: 19px solid transparent
+		content: ""
+		height: 37px
+		left: 0
+		position: absolute
+		top: 0
+		@include transition(.4s)
+		width: 100%
+		z-index: 1
+
+	&:after
+		display: block
+		border-top: 3px solid transparent
+		border-left: 5px solid $blue
+		border-bottom: 3px solid transparent
+		content: ""
+		height: 0
+		width: 0
+		position: absolute
+		right: 19px
+		top: 14px
+		@include transition(.4s)	
+		z-index: 2
+
+	span
+		position: relative
+		z-index: 5
+
+	&:hover, &:focus, &:active
+		&:before
+			border-top-color: $blue
+
+		&:after
+			border-left-color: $black
+
+#msg
+	min-height: 30px

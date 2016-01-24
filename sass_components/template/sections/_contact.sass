@@ -1,0 +1,200 @@
+/* ***********  CONTACT ****************** */
+#big-map
+	border: 6px solid black
+	height: 400px
+	width: 100%
+	
+.two-colors-column	
+	position: relative
+	
+	.big
+		font-size: 14px
+		margin: -10px 0 10px
+	
+	.row
+		height: 435px
+		padding-bottom: 15px
+		padding-top: 55px
+		position: relative
+		z-index: 5
+		
+	.col-xs-12
+		min-height: 100%
+		
+	.color-decor
+		background: #F7F7F7
+		display: block
+		height: 100%
+		position: absolute
+		right: 0
+		top: 0
+		width: 50%
+		
+	.wrapp
+		margin: 0 auto
+		max-width: 360px
+		width: 95%
+		
+.contact-list, .location-list
+	list-style-type: none
+	margin: 0 0 15px
+	padding: 0
+	
+	li
+		margin: 0 0 12px
+		min-height: 26px
+		padding: 3px 0 5px 30px
+		position: relative
+		
+	li:before
+		background: url(#{$img}sprite_contact.png) 0 0 no-repeat
+		content: ""
+		display: block
+		height: 23px
+		left: 0
+		position: absolute
+		top: 0
+		width: 23px
+		
+	li.address:before
+		background-position: 0 -1px
+		
+	li.tel:before
+		background-position: 0 -57px
+		
+	li.email:before
+		background-position: 0 -88px
+		
+	li.person:before
+		background-position: 0 -29px
+		
+		
+	li.tel, li.email	
+		min-height: 1px
+		padding: 0
+		
+		a
+			color: black
+			display: block	
+			min-height: 26px
+			padding: 6px 0 5px 30px
+			
+			&:hover, &:focus,  &:active
+				color: lighten(#000, 20)
+			
+.custom-textbox, .custom-textarea
+	background: transparent
+	border: none
+	border-bottom: 1px solid #C8C8C8
+	display: block
+	height: 20px
+	margin: 0 0 10px
+	width: 100%
+	
+.custom-textarea
+	height: 75px	
+	
+.custom-submit
+	background: black
+	border: none
+	@include border-radius(0)
+	color: #fff
+	display: block
+	font-size: 14px
+	line-height: 1em
+	margin: 0 0 15px auto
+	padding: 10px 35px 10px 15px
+	width: 120px
+	
+	&:hover, &:active, &:focus
+		background-color: lighten(black, 20)
+	
+.custom-submit:after
+	background: url(#{$img}sprite_general.png) -150px -186px no-repeat
+	content: ""
+	display: block
+	height: 8px
+	position: absolute
+	right: 12px
+	top: 12px
+	width: 7px
+	
+.contact-three-col
+	h2
+		font-size: 24px
+		
+	.col-xs-12
+		min-height: 35px
+		padding-top: 40px 
+		padding-bottom: 25px
+		
+	.col-xs-12.no-padding
+		padding: 0 15px 0 0
+		
+		.text-right
+			text-align: right
+
+.contact-three_col.large
+	.col-xs-12
+		height: 540px
+		
+	#map, .image
+		height: 50%
+		margin: 0
+		
+	#map	
+		text-align: center
+		
+		.wrapp
+			text-align: right
+			vertical-align: bottom
+		
+#map
+	border: 6px solid black
+	height: 310px
+	margin: 0 0 15px
+	width: 100%
+	
+.panel
+	border: none
+	@include box-shadow(none)
+	
+.panel-default > .panel-heading + .panel-collapse > .panel-body
+	border: none
+	
+.panel-heading
+	a
+		color: black
+		display: block
+		font-size: 13px
+		padding: 10px 15px
+		
+		&:hover, &:focus, &:active
+			color: lighten(black, 20)
+			
+.panel-default > .panel-heading
+	background: transparent
+	border: none
+	border-bottom: 1px solid #C8C8C8
+	padding: 0
+	
+.panel-group
+	.panel + .panel
+		@include border-radius(0)
+		
+.location-list		
+	font-size: 13px
+	
+	a
+		color: black
+		
+		&:hover, &:focus, &:active
+			color: lighten(black, 20)
+		
+	
+	li:before
+		background-position: 0 -1px
+		
+	em
+		display: block
+		font-style: normal

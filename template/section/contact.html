@@ -1,0 +1,98 @@
+{% load staticfiles %}
+<div id="location-row" class="row">
+    <div class="col-xs-12 col-sm-7">
+        <div id="map">
+            <a href="https://www.google.com.mx/maps/place/Jos%C3%A9+Gorostiza+1165,+Zona+Urbana+Rio+Tijuana,+22010+Tijuana,+B.C./@32.5342644,-117.0217093,17z/data=!4m2!3m1!1s0x80d948576aa7ba2d:0xcfa371ca590dccd7" title="Open in google maps" target="_blank">Map to visit our offices</a>
+        </div> 
+    </div>  
+    <div class="col-xs-12 col-sm-5">
+        <span id="contact-location" class="img">visit us in our offices</span>
+    </div>   
+</div>       
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="wrap">
+                    <h2 data-translate="contact.a"></h2>
+                    <ul id="contact-info">
+                        <li><h3>México</h3>
+                            <ul>
+                                <li><h4>Tijuana</h4>
+                                    <p>Edificio CIMA<br />
+                                    José Gorostiza 1165-8 Zona Río<br />
+                                    Tijuana, Baja California 22010</p>
+                                    <a href="tel:011526646835759" class="tel">011-52-664-683-5759</a>
+                                </li>
+                                <li><h4>Mexicali</h4>
+                                    <p>Avenida Madero #1250<br />
+                                    Colonia Nueva, Segunda Sección<br />
+                                    Mexicali B.C. 21100</p>
+                                    <a href="tel:011526865526009" class="tel">011-52-686-552-6009 <span data-translate="contact.and"></span> 10</a>
+                                </li>
+                                <li><h4>La Paz</h4>
+                                    <p>México 2695<br />
+                                    Antonio Navarro<br />
+                                    La Paz, Baja California Sur 23040</p>
+                                    <a href="tel:011526121286977" class="tel">011-52-612-128-6977</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Chula Vista</h4>
+                            <p>819 Anchorage Place Suite 108<br />
+                            Chula Vista CA. 91914</p>
+                            <a href="tel:16193709387" class="tel">1-619-370-9387</a>
+                        </li>
+                    </ul>
+                </div><!-- .wrap -->   
+            </div><!-- .col-xs-12 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="wrap">
+                    <form name="contact_form" novalidate="novalidate">
+                        <h1 data-translate="string.b"></h1>
+                        <label data-translate="contact.b"></label>
+                        <input type="text" id="name" name="name" class="custom_textbox" data-ng-model="contact.name" data-ng-required='validate.name.required' data-ng-minlength='validate.name.min' data-ng-maxlength='validate.name.max' maxlength='[[validate.name.max]]' />
+                        
+                        <label>E-mail</label>
+                        <input type="email" id="email" name="email" data-ng-model="contact.email" data-ng-required='validate.email.required' data-ng-minlength='validate.email.min' data-ng-maxlength='validate.email.max' data-ng-pattern="validate.email.pattern" class="custom_textbox" maxlength='[[validate.email.max]]' />
+                        
+                        <label data-translate="contact.c"></label>
+                        <input type="text" id="tel" name="tel" class="custom_textbox" data-ng-model="contact.tel" data-ng-required='validate.tel.required' data-ng-minlength='validate.tel.min' data-ng-maxlength='validate.tel.max' maxlength='[[validate.tel.max]]' />
+                        
+                        <label data-translate="contact.d"></label>
+                        <textarea id="message" name="message" data-ng-model="contact.message" data-ng-required='validate.message.required' data-ng-minlength='validate.message.min' data-ng-maxlength='validate.message.max' class="custom_textarea" maxlength='[[validate.message.max]]'></textarea>
+
+                        <button type="submit" class="custom_submit" data-ng-click="sendEmail(contact_form, contact)" data-ng-disabled="messageState.state == 3"><span data-translate="contact.e"></span></button>
+                        
+                        <div id="msg" data-ng-show="contact_form.$submitted || messageState.state == 2">
+                            <span data-ng-bind="messageState.msg" data-ng-class="{'error': (contact_form.$invalid && contact_form.dirty) || messageState.state == 0 || messageState.state == 3}"></span>
+                                <span data-ng-show="messageState.state == 1">
+                                <img data-ng-src="{% static 'img/ajax-loader.gif' %}" alt="loading">
+                            </span>
+                        </div><!-- #msg -->
+                    </form>
+                </div><!-- .wrap --> 
+
+                <div class="wrap">
+                    <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <a href="mailto:info@vega.sc" title="E-mail us" class="email">info@vega.sc</a>
+                            </div><!-- .col-xs-12 -->
+                            <div class="col-xs-12 col-sm-6">
+                                <ul class="social">
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/vegalawconsulting?fref=ts" title="Facebook" target="_blank">Facebook</a>
+                                    </li><li class="linkedin">
+                                        <a href="https://www.linkedin.com/company/vega-abogados" title="Linkedin" target="_blank">Linkedin</a>
+                                    </li><li class="twitter">
+                                        <a href="https://twitter.com/vega_abogadossc" title="Twitter" target="_blank">Twitter</a>
+                                    </li>
+                                </ul><!-- .social -->
+                            </div><!-- .col-xs-12 -->
+                        </div><!-- .row -->   
+                </div> 
+            </div><!-- .col-xs-12 -->  
+        </div><!-- .row -->
+    </div><!-- .container -->
+</div><!-- .contact -->

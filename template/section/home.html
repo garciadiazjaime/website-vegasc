@@ -1,0 +1,103 @@
+{% load staticfiles %}
+<div id="home-banner">
+    <carousel interval="50000">
+        <slide class="item active layout-left slide-1">
+            <div class="wrapp">
+                <div>
+                    <h1><span class="hidden">Vega abogados |</span><span data-translate="home.banner.a"></span></h1>
+                    <a href="" data-ui-sref="[['app.' + menu.aboutus]]" title="Know more about us" class="button white"><span data-translate="string.a"></span></a>
+                </div>
+                <span class="decor"></span>
+            </div><span class="height-control"></span>
+        </slide>
+        <slide class="item layout-left slide-2">
+            <div class="wrapp">
+                <div>
+                    <h1><span class="hidden">Vega abogados |</span><span data-translate="home.banner.b"></span></h1>
+                    <a href="" data-ui-sref="[['app.' + menu.aboutus]]" title="Know more about us" class="button white"><span data-translate="string.a"></span></a>
+                </div>
+                <span class="decor"></span>
+            </div><span class="height-control"></span>
+        </slide>
+    </carousel>
+</div><!-- #home-banner /.carousel -->
+<div id="featured-services">
+    <div class="row grid columns-3 first">
+        <div class="col-xs-12 col-sm-4 first dark">
+            <a title="Know more about Civil Litigation" href=""  data-ui-sref="[['app.' + menu.civillitigation]]">
+                <div class="wrapper">
+                    <h3><span data-translate="whatwedo.services.0.title"></span></h3>
+                    <p class="button white"><span data-translate="string.a"></span></p>
+                </div><span class="height-control"></span>
+                <!-- .wrapper.side-cell -->
+            </a>
+        </div>
+        <!-- .col-sm-4 -->
+        <div class="col-xs-12 col-sm-3">
+            <a title="Know more about Cross Border Law" href="" data-ui-sref="[['app.' + menu.crossborderlaw]]">
+                <div class="wrapper">
+                    <h3><span data-translate="whatwedo.services.2.title"></span></h3>
+                    <p class="button white dark-arrow"><span data-translate="string.a"></span></p>
+                </div><span class="height-control"></span>
+                <!-- .wrapper.side-cell -->
+            </a>
+        </div>
+        <!-- .col-sm-3 -->
+        <div class="col-xs-12 col-sm-5 icon-holder">
+            <span id="old-border" class="img">Image of Tijuana's border crossing</span>
+        </div>
+        <!-- .col-sm-4 -->
+    </div>
+    <div class="row grid columns-3">
+        <div class="col-xs-12 col-sm-3 first">
+            <a title="Know more about Our Firm" href="" data-ui-sref="[['app.' + menu.whoweare]]">
+                <div class="wrapper">
+                    <h3><span data-translate="menu.aboutus"></span></h3>
+                    <p class="button more icon_holder"><span data-translate="string.a"></span></p>
+                </div><span class="height-control"></span>
+                <!-- .wrapper.side-cell -->
+            </a>
+        </div>
+        <!-- .col-sm-2 -->
+        <div class="col-xs-12 col-sm-5 icon-holder">
+            <span id="vega-door" class="img">Our door is open for you, consult us anytime</span>
+        </div>
+        <!-- .col-sm-6 -->
+        <div class="col-xs-12 col-sm-4 icon-holder">
+            <a title="Know more about Our Practice" href="" data-ui-sref="[['app.' + menu.fieldaction]]">
+                <div class="wrapper">
+                    <h3><span data-translate="menu.whatwedo"></span></h3>
+                    <p class="button more icon_holder"><span data-translate="string.a"></span></p>
+                </div><span class="height-control"></span>
+                <!-- .wrapper.side-cell -->
+            </a>
+        </div>
+        <!-- .col-sm-4 -->
+    </div>
+</div><!-- #featured-services -->
+<div class="text-center logo-construction">
+    <br />
+    <img src="{% static 'img/logo-construccion.png' %}" alt="logo construccion">
+    <br />
+</div>
+<div id="our-philosophy">
+    <div class="container">
+        <h2 data-translate="string.e"></h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5">
+                <blockquote data-translate="home.philosophy.a"></blockquote>
+            </div>    
+            <div class="col-xs-12 col-sm-7">
+                <p data-translate="home.philosophy.b"></p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <a href="" data-ui-sref="[['app.' + menu.aboutus]]" title="Know more about us" class="button"><span data-translate="string.a"></span></a>
+                    </div>    
+                    <div class="col-xs-12 col-sm-6 text-right">
+                        <a href="" data-ui-sref="[['app.' + menu.contact]]" class="custom_submit"><span data-translate="string.b"></span></a>
+                    </div>
+                </div>
+            </div>   
+        </div>     
+    </div>    
+</div><!-- #our-philosophy -->   

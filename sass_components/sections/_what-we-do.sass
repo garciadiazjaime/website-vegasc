@@ -1,0 +1,122 @@
+#banner.what-we-do
+	background: url(#{$img}services-banner-xs.jpg) center top no-repeat
+	background-size: cover
+
+#field-action, #services
+	text-align: center
+
+	.wrap
+		margin: 0 auto
+		max-width: 645px
+
+	p
+		line-height: 1.9em
+
+#field-action
+	margin: 0 0 90px
+
+	h2
+		border-top: 1px solid $blue
+		color: $blue
+		font-size: 49px
+		font-style: italic
+		line-height: 1em
+		margin: 0 0 25px
+		padding: 35px 0 0
+		text-align: center
+
+		&:before
+			border: none
+			display: none
+
+#services
+	.button
+		display: block
+		margin: 60px auto 0
+		width: 180px
+
+	h2
+		border-bottom: 1px solid $blue
+		font: 10px 'muli', Helvetica, Verdana, sans-serif
+		font-weight: normal
+		padding: 0 0 20px
+		text-align: left
+		text-transform: uppercase
+
+		&:before
+			border: none
+			display: none
+
+	#accordion
+
+		.ui-state-focus
+			outline: none
+
+		.ui-accordion-header
+			outline: none
+
+		div
+			border: none
+
+		h3
+			background: none
+			border: none
+			color: $blue
+			@extend %times
+			font-size: 30px
+			font-style: italic
+			padding-left: 0
+			padding-right: 0
+
+			&:before
+				border: none
+
+			&:active
+				border: none
+
+			.ui-accordion-header-icon
+				display: none
+
+			&.ui-accordion-header-active
+
+				&:after
+					background: sprite($general-icons, down-arrow)
+					bottom: 0
+					content: ""
+					@include sprite-dimensions($general-icons,  down-arrow)
+					left: 50%
+					margin: 0
+					margin-left: -((image-width(sprite-file($general-icons,  down-arrow)))/2)
+					position: absolute
+
+		.ui-accordion-content
+			border: none
+
+			li
+				list-style: none
+				font-family: 'muli', Helvetica, Verdana, sans-serif
+				font-weight: normal
+				font-size: 14px
+
+				&:before
+					content: ''
+					display: inline-block
+					width: 5px
+					height: 5px
+					background: black
+					position: relative
+					bottom: 2px
+					right: 10px
+					@include border-radius(30px)
+
+
+	.custom_submit
+		display: inline-block
+		font-size: 10px
+		height: 38px
+		margin: 70px 0 15px
+		max-width: 180px
+		padding: 13px 30px 5px 15px
+		text-align: left
+		width: 128px
+

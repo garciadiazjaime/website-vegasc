@@ -1,0 +1,234 @@
+/* *************** HEADER *************** */
+@media screen and (max-width: 767px)
+	#footer-main
+		.container
+			text-align: center
+
+		.col-sm-8
+			.row:nth-child(2)
+				.col-xs-12
+					&:first-child, &:nth-child(3)
+						padding-left: 15px
+						padding-top: 20px
+
+						&:before
+							left: 50%
+							margin: 0 0 0 -100px
+							text-align: center
+							top: 0
+							width: 200px
+
+		.tel
+			margin: 20px 0
+
+		.email, .social
+			margin: 0 0 15px
+
+		.brochure
+			padding: 20px 0
+
+	#footer-bottom
+		.col-xs-12
+			text-align: center
+
+	p#credit
+		margin-top: 10px
+
+	.navbar-default
+		.navbar-collapse.in
+			border-top: none
+
+	.navbar
+		ul
+			display: block
+			margin: 0 -15px
+
+	.navbar-default
+		.navbar-nav > li > a
+			border: none
+			@include transition(.4s)
+
+			&:hover, &:focus, &:active
+				background: $blue
+				color: $black
+
+	#header-tools
+		ul, p
+			display: inline-block
+
+
+@media screen and (min-width: 768px)
+	body
+		padding: 70px 0 0
+			
+	header, #header
+		.navbar-default
+			padding: 12px 0 23px
+
+@media screen and (max-width: 500px)
+	#footer-head
+		letter-spacing: 0.3em
+
+
+@media screen and (max-width: 440px)
+	#header, header
+		.social
+			li
+				margin: 0 0 0 4px
+
+	#header-tools
+		right: 60px
+
+	#lang
+		margin: 5px 0 0 9px
+
+@media screen and (max-width: 399px)
+	#header, header
+		.social
+			display: none
+
+@media screen and (max-width: 310px)
+	#header-tools
+		right: 53px
+
+
+@media screen and (max-width: 767px)
+	#our-philosophy
+		blockquote
+			max-width: 100%
+			
+		.text-right
+			text-align: left
+
+		.button
+			display: block
+			margin: 20px auto 15px
+
+	#home-banner
+		.carousel-control
+			padding: 170px 0 0
+
+@media screen and (max-width: 500px)
+	#home-banner
+		h1, .main-title
+			font-size: 20px
+			margin: 0 0 15px
+
+		h1
+			padding: 90px 0 0
+
+		.carousel-control
+			padding: 95px 0 0
+
+		.carousel-indicators
+			height: 60px
+
+@media screen and (min-width: 767px) and (max-width: 1010px)
+	.columns-3
+		p.button, a.button
+			margin-left: 0
+
+/* *************** ABOUT US *************** */
+@media screen and (min-width: 501px)
+	#banner
+		height: 370px
+
+	#banner.about-us
+		background-image: url(#{$img}about-office.jpg)
+
+	#paperwork
+		span
+			background-image: url(#{$img}about-paperwork.jpg)
+
+@media screen and (max-width: 767px)
+	#who-we-are, #our-history
+		h2
+			max-width: 100%
+
+		.img
+			left: 0
+			margin: 10px 0 35px
+			max-width: 100%
+			position: relative
+			top: 0
+			width: 100%
+
+			span
+				background-size: cover
+				left: 0
+				max-width: 100%
+				right: auto
+				width: 100%
+
+				&:before
+					left: 50%
+					margin: 0 0 0 -45%
+					max-width: 90%
+					right: auto
+					width: 90%
+
+				&:after
+					display: none
+
+	#our-team
+		.wrap
+			margin: 0
+
+@media screen and (max-width: 500px)
+	#solutions-phrase
+		padding: 50px 0 60px
+		h3
+			font-size: 26px
+			max-width: 280px
+
+			&:before
+				top: 10px
+
+/* *************** WHAT WE DO *************** */
+@media screen and (min-width: 501px)
+	#banner.what-we-do
+		background-image: url(#{$img}services-banner.jpg)
+
+/* *************** CONTACT *************** */
+@media screen and (min-width: 501px)
+	#contact-location
+		background-image: url(#{$img}contact-location.jpg)
+
+
+@media screen and (max-width: 767px)
+	.contact
+		&:after
+			display: none
+
+		.col-xs-12
+			&:nth-child(2)
+				.wrap
+					&:after
+						background: #f7f7f7
+						content: ""
+						display: block
+						height: 100%
+						margin: 0
+						position: absolute
+						left: 0
+						top: 0
+						width: 100%
+						z-index: 1
+
+					&:nth-child(2)
+						&:after
+							background: #fff
+							bottom: 0
+							height: 90px
+							top: auto
+		
+		#location-row
+			height: auto
+
+		#map, #contact-location
+			position: static
+
+/* *************** TERMS AND CONDITIONS *************** */
+@media screen and (min-width: 501px)
+	#banner.terms-conditions
+		background-image: url(#{$img}about-office.jpg)

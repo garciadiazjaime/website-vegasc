@@ -1,0 +1,33 @@
+<div id="banner" class="what-we-do">
+	<div class="wrap">
+		<h1 data-translate="menu.whatwedo"></h1>
+		<p data-translate="whatwedo.banner.a"></p>
+		<p class="more" data-translate="string.a"></p>
+	</div><span class="height-control"></span>	
+</div><!-- #banner -->
+<div id="field-action">
+	<span id="campo-accion"></span>
+	<div class="container">
+		<h2  data-translate="whatwedo.container.a"></h2>
+		<div class="wrap">
+			<p data-translate="whatwedo.container.b"></p>
+			<p data-translate="whatwedo.container.c"></p>
+		</div>	
+	</div>
+</div><!-- #field-action -->
+<div id="services">
+	<div class="container">
+		<h2 data-translate="menu.practice"></h2>
+		
+		<div id="accordion">
+			<div data-ng-repeat="service in vegaServices" class="group">
+				<h3><span data-translate="[['whatwedo.services.' + $index + '.title']]"></span></h3>
+				<div><span data-translate="[['whatwedo.services.' + $index + '.content']]"></span></div>
+			</div>	
+
+			<a class="custom_submit" title="Contact Us" href="" data-ui-sref="[['app.' + menu.contact]]"><span data-translate="string.b"></span></a>
+
+		</div>
+
+	</div>	
+</div>	
