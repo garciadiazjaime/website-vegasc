@@ -11,10 +11,15 @@ Installation Steps
 * Clone project
 * Checkout dev branch
 * Create your branch (topics/feature)
-* Run `bower install`
-* Run `python manage.py runserver`
-* Run `gulp watch` (another tab)
-* Run `compass watch` (another tab)
+* Create python env (recommended: https://virtualenvwrapper.readthedocs.org/en/latest/)
+* Install python packages: `npm run install-dj`
+* Install node packages: `npm install`
+* Install bower packages: `node_modules/.bin/bower install`
+* Run the server: `npm run server`
+* Watch js changes: `npm run watch-js`
+* Install rbenv (ruby 2.3.0) https://github.com/rbenv/rbenv#homebrew-on-mac-os-x
+* Install ruby packages (gem install compass, gem install bootstrap-sass)
+* Watch sass changes: `npm run watch-css`
 
 Notes
 ------

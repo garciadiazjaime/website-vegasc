@@ -6,7 +6,7 @@ angular.module('mint.app.GenericController', ['ngSanitize'])
             setTimeout(function(){
                 AutoScrollService.scrollTo();
             }, 400);
-            
+
             $scope.vegaServices = getVegaServices();
             var lang = GenericService.getLang();
             $scope.menu = GenericService.getMenu(lang);
@@ -14,9 +14,9 @@ angular.module('mint.app.GenericController', ['ngSanitize'])
                 $( "#accordion" ).accordion({
                     header: "> div > h3",
                     heightStyle: "content"
-                });    
+                });
             }, 300);
-            
+
         };
 
         var clicks = {};
@@ -62,7 +62,7 @@ angular.module('mint.app.GenericController', ['ngSanitize'])
         var removeCSSClass = function(className){
         	var elements = document.getElementsByClassName(className);
         	for(var i=0; i<elements.length; i++){
-        		elements[i].classList.remove(className);	
+        		elements[i].classList.remove(className);
         	}
         };
 
