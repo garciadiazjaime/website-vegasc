@@ -14,7 +14,7 @@ Installation Steps
 * Create python env (recommended: https://virtualenvwrapper.readthedocs.org/en/latest/)
 * Install python packages: `npm run install-dj`
 * Install node packages: `npm install`
-* Install bower packages: `node_modules/.bin/bower install`
+* Install bower packages: `npm run install-bower`
 * Run the server: `npm run server`
 * Watch js changes: `npm run watch-js`
 * Install rbenv (ruby 2.3.0) https://github.com/rbenv/rbenv#homebrew-on-mac-os-x
