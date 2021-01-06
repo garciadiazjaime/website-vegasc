@@ -1,9 +1,5 @@
-Vega
-==============
-A website made for legal firm Vega abogados.
-
-A project designed by [Pool Branding](http://somospool.com/) and coded by [Mint IT Media](http://mintitmedia.com/)
-
+# Powered
+[Sofware Development Tijuana](https://mintitmedia.com/)
 
 Installation Steps
 ------
@@ -26,3 +22,11 @@ Notes
 
 * SASS files are in **sass_components**
 * To improve speed when generating sprites, install oily (gem install oily_png) (http://compass-style.org/help/tutorials/spriting/)
+
+
+## Env
+```
+export PATH="~/.pyenv/versions/3.5.3/bin:${PATH}"
+virtualenv vegasc
+source vegasc/bin/activate
+```

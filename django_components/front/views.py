@@ -47,3 +47,6 @@ def modal_success(request):
 
 def modal_error(request):
 	return render_to_response('block/error.html')
+
+def challenge(request):
+	return HttpResponse('biZGEmIrcnazBnwm1X1RWu_xX7bawUHa0sqPtYQk4KQ.ROJt6qUhmmn0UaHbd-OcDEiLZVnE6klzI57DmiEMZHA')

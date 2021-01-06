@@ -33,5 +33,7 @@ urlpatterns = patterns('',
     url(r'^partial/section/', include('django_components.front.urls')),
     url(r'^partial/block/', include('django_components.front.urls')),
 
+    url(r'.well-known/acme-challenge', 'django_components.front.views.challenge', name='challenge'),
+
     # url(r'^admin/', include(admin.site.urls)),
 )
