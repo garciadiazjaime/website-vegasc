@@ -30,3 +30,8 @@ export PATH="~/.pyenv/versions/3.5.3/bin:${PATH}"
 virtualenv vegasc
 source vegasc/bin/activate
 ```
+
+## Run
+````
+docker run -d -p 49165:3035 garciadiazjaime/website-vega
+```
