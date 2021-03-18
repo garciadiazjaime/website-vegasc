@@ -29,6 +29,7 @@ Notes
 export PATH="~/.pyenv/versions/3.5.3/bin:${PATH}"
 virtualenv vegasc
 source vegasc/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Run
