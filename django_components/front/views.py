@@ -49,4 +49,4 @@ def modal_error(request):
 	return render_to_response('block/error.html')
 
 def challenge(request):
-	return HttpResponse('h7N24u8Qm4lAlQ6kllzkdalPvLD3i6L3us8ViCDTQ7c.ROJt6qUhmmn0UaHbd-OcDEiLZVnE6klzI57DmiEMZHA')
+	return HttpResponse('SM90lIyBhK9ldPQ-m__yi9zvCsWsgRP61XJgig9bxBI.ROJt6qUhmmn0UaHbd-OcDEiLZVnE6klzI57DmiEMZHA')
