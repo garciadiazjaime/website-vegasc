@@ -3,5 +3,5 @@ django-cors-headers==1.1.0
 ecdsa==0.13
 Fabric==1.10.2
 nodeenv==0.13.6
-paramiko==1.16.0
+paramiko==2.10.1
 pycrypto==2.6.1
